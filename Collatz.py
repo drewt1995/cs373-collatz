@@ -31,15 +31,28 @@ def collatz_eval(i, j):
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
-    # <your code>
-    return 1
+    max_length = 0
+
+
+    for value in range(i, j+1):
+        count = 1
+        while value != 1:
+            if value % 2 == 0:
+                value /= 2
+            else:
+                value = (value * 3) + 1
+            count += 1
+        if count > max_length:
+            max_length = count
+
+    return max_length
 
 # -------------
 # collatz_print
 # -------------
 
 
-def collatz_print(writer, start, end, maxLength):
+def collatz_print(writer, start, end, max_length):
     """
     print three ints
     w a writer
@@ -47,7 +60,7 @@ def collatz_print(writer, start, end, maxLength):
     j the end       of the range, inclusive
     v the max cycle length
     """
-    writer.write(str(start) + " " + str(end) + " " + str(maxLength) + "\n")
+    writer.write(str(start) + " " + str(end) + " " + str(max_length) + "\n")
 
 # -------------
 # collatz_solve
@@ -61,5 +74,5 @@ def collatz_solve(reader, writer):
     """
     for line in reader:
         start, end = collatz_read(line)
-        maxLength = collatz_eval(start, end)
-        collatz_print(writer, start, end, maxLength)
+        max_length = collatz_eval(start, end)
+        collatz_print(writer, start, end, max_length)
