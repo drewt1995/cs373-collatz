@@ -11,14 +11,14 @@
 # ------------
 
 
-def collatz_read(s):
+def collatz_read(line):
     """
     read two ints
     s a string
     return a list of two ints, representing the beginning and end of a range, [i, j]
     """
-    a = s.split()
-    return [int(a[0]), int(a[1])]
+    tokens = line.split()
+    return [int(tokens[0]), int(tokens[1])]
 
 # ------------
 # collatz_eval
@@ -39,7 +39,7 @@ def collatz_eval(i, j):
 # -------------
 
 
-def collatz_print(w, i, j, v):
+def collatz_print(writer, start, end, maxLength):
     """
     print three ints
     w a writer
@@ -47,19 +47,19 @@ def collatz_print(w, i, j, v):
     j the end       of the range, inclusive
     v the max cycle length
     """
-    w.write(str(i) + " " + str(j) + " " + str(v) + "\n")
+    writer.write(str(start) + " " + str(end) + " " + str(maxLength) + "\n")
 
 # -------------
 # collatz_solve
 # -------------
 
 
-def collatz_solve(r, w):
+def collatz_solve(reader, writer):
     """
     r a reader
     w a writer
     """
-    for s in r:
-        i, j = collatz_read(s)
-        v = collatz_eval(i, j)
-        collatz_print(w, i, j, v)
+    for line in reader:
+        start, end = collatz_read(line)
+        maxLength = collatz_eval(start, end)
+        collatz_print(writer, start, end, maxLength)
