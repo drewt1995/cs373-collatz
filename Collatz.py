@@ -9,7 +9,8 @@
 # ------------
 # collatz_read
 # ------------
-
+min_value = 0
+max_value = 1000000
 
 def collatz_read(line):
     """
@@ -31,20 +32,23 @@ def collatz_eval(i, j):
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
+    assert isinstance(i, int)
+    assert isinstance(j, int)
+
     max_length = 0
+    if i > min_value and j < max_value:
+        for value in range(i, j+1):
+            count = 1
+            while value != 1:
+                if value % 2 == 0:
+                    value /= 2
+                else:
+                    value = (value * 3) + 1
+                count += 1
+            if count > max_length:
+                max_length = count
 
-
-    for value in range(i, j+1):
-        count = 1
-        while value != 1:
-            if value % 2 == 0:
-                value /= 2
-            else:
-                value = (value * 3) + 1
-            count += 1
-        if count > max_length:
-            max_length = count
-
+    assert max_length > 0
     return max_length
 
 # -------------
