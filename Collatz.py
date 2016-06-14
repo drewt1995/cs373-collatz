@@ -9,8 +9,8 @@
 # ------------
 # collatz_read
 # ------------
-min_value = 0
-max_value = 1000000
+MINVAL = 0
+MAXVAL = 1000000
 
 def collatz_read(line):
     """
@@ -36,7 +36,7 @@ def collatz_eval(i, j):
     assert isinstance(j, int)
 
     max_length = 0
-    if i > min_value and j < max_value:
+    if i > MINVAL and j < MAXVAL:
         for value in range(i, j+1):
             count = 1
             while value != 1:

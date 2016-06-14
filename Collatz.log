@@ -1,0 +1,35 @@
+commit 13857cce1d5da80290549c3c2a42e82b9b49ee8c
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Tue Jun 14 12:04:12 2016 -0500
+
+    resolved issue #4, added asserts and checks to the collatz_eval function
+
+commit 43fc6e566dcd61beeae684a2e46dc13f7d1977f6
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Mon Jun 13 18:28:40 2016 -0500
+
+    Fixed Unit tests to have correct values, along with RunCollatz.py, fixed issue #1
+
+commit 8f6a627272902d47d3a504b538d45d545b8a755f
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Mon Jun 13 18:21:46 2016 -0500
+
+    Attemting to resolve issue with Travis CI
+
+commit 041cc1f1952fcfb449c6baa3214c14870cd79bed
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Mon Jun 13 18:18:05 2016 -0500
+
+    Fixed issue #3, fixed issue #12, added the most basic functionality for collatz
+
+commit a071838ae7539483a42aecd5a7da6faabd0c70ba
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Mon Jun 13 17:51:23 2016 -0500
+
+    Gave variables meaningful names to resolve #11
+
+commit 9150eb5e3e231967385ce1d189026184232e4cf5
+Author: drewt1995 <drewt1995@gmail.com>
+Date:   Sun Jun 12 20:36:30 2016 -0500
+
+    Initial commit, adding all the necessary files to begin work

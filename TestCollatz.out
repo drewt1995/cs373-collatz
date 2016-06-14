@@ -1,11 +1,23 @@
-.......
+....E.E
+======================================================================
+ERROR: test_print (__main__.TestCollatz)
 ----------------------------------------------------------------------
-Ran 7 tests in 0.000s
+Traceback (most recent call last):
+  File "TestCollatz.py", line 62, in test_print
+    collatz_print(w, 1, 10, 20)
+  File "/home/andrew/Documents/School/cs373/cs373-collatz/Collatz.py", line 67, in collatz_print
+    writer.write(str(start) + " " + str(end) + " " + str(max_length) + "\n")
+TypeError: unicode argument expected, got 'str'
 
-OK
-Name          Stmts   Miss Branch BrMiss  Cover   Missing
----------------------------------------------------------
-Collatz          12      0      2      0   100%
-TestCollatz      33      1      2      1    94%   81
----------------------------------------------------------
-TOTAL            45      1      4      1    96%
+======================================================================
+ERROR: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 70, in test_solve
+    r = StringIO("1 10\n100 200\n201 210\n900 1000\n")
+TypeError: initial_value must be unicode or None, not str
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+FAILED (errors=2)
