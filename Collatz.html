@@ -23,6 +23,9 @@
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl><dt><a name="-collatz_eval"><strong>collatz_eval</strong></a>(i, j)</dt><dd><tt>i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
 j&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+&nbsp;<br>
+Uses&nbsp;the&nbsp;FIXEDINCREMENT&nbsp;global&nbsp;variable&nbsp;as&nbsp;a&nbsp;cache&nbsp;to&nbsp;look&nbsp;up&nbsp;values&nbsp;over&nbsp;ranges<br>
+&nbsp;<br>
 return&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length&nbsp;of&nbsp;the&nbsp;range&nbsp;[i,&nbsp;j]</tt></dd></dl>
  <dl><dt><a name="-collatz_print"><strong>collatz_print</strong></a>(writer, start, end, max_length)</dt><dd><tt>print&nbsp;three&nbsp;ints<br>
 writer&nbsp;a&nbsp;writer<br>
@@ -30,7 +33,7 @@ start&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
 end&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
 max_length&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length</tt></dd></dl>
  <dl><dt><a name="-collatz_read"><strong>collatz_read</strong></a>(line)</dt><dd><tt>read&nbsp;two&nbsp;ints<br>
-line&nbsp;a&nbsp;string<br>
+s&nbsp;a&nbsp;string<br>
 return&nbsp;a&nbsp;list&nbsp;of&nbsp;two&nbsp;ints,&nbsp;representing&nbsp;the&nbsp;beginning&nbsp;and&nbsp;end&nbsp;of&nbsp;a&nbsp;range,&nbsp;[i,&nbsp;j]</tt></dd></dl>
  <dl><dt><a name="-collatz_solve"><strong>collatz_solve</strong></a>(reader, writer)</dt><dd><tt>reader&nbsp;a&nbsp;reader<br>
 writer&nbsp;a&nbsp;writer</tt></dd></dl>
@@ -42,8 +45,9 @@ writer&nbsp;a&nbsp;writer</tt></dd></dl>
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>CACHE</strong> = {}<br>
+<strong>FIXEDINCREMENT</strong> = [0, 179, 182, 217, 238, 215, 236, 262, 252, 247, 260, 268, 250, 263, 276, 271, 271, 266, 279, 261, ...]<br>
 <strong>MAXCYCLE</strong> = 525<br>
-<strong>MAXVAL</strong> = 1000000<br>
+<strong>MAXVAL</strong> = 999999<br>
 <strong>MINVAL</strong> = 0<br>
 <strong>TESTVAL</strong> = 837799</td></tr></table>
 </body></html>

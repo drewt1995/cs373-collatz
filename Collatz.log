@@ -1,3 +1,15 @@
+commit a7dc8c417a269a769b90a46798d251837d8a122c
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 11:08:50 2016 -0500
+
+    Created acceptance tests that check corner cases and updated makefile to ignore pylint warning
+
+commit 932f95fc805965d63b0b3003ee6684c1f59d5a7b
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 10:47:57 2016 -0500
+
+    Adding in the Updated info
+
 commit b121c71b7775f93a3a3baed9291bd966b6953d11
 Author: Andrew Turner <drewt1995@gmail.com>
 Date:   Wed Jun 15 10:41:05 2016 -0500

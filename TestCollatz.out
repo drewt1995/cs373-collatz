@@ -8,4 +8,4 @@ Name             Stmts   Miss Branch BrPart  Cover   Missing
 Collatz.py          64      2     38      2    96%   185, 197, 184->185, 196->197
 TestCollatz.py      75      0      0      0   100%
 ------------------------------------------------------------
-TOTAL              139      2     38      2    98%
+TOTAL              1Sp39      2     38      2    98%
