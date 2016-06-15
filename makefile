@@ -6,12 +6,11 @@ FILES :=                              \
     RunCollatz.out                    \
     RunCollatz.py                     \
     TestCollatz.out                   \
-    TestCollatz.py
-
-#    collatz-tests/EID-RunCollatz.in   \
-#    collatz-tests/EID-RunCollatz.out  \
-#    collatz-tests/EID-TestCollatz.out \
-#    collatz-tests/EID-TestCollatz.py  \
+    TestCollatz.py                    \
+    collatz-tests/ajt2374-RunCollatz.in   \
+    collatz-tests/ajt2374-RunCollatz.out  \
+    collatz-tests/ajt2374-TestCollatz.out \
+    collatz-tests/ajt2374-TestCollatz.py  
 
 ifeq ($(CI), true)
     COVERAGE := coverage
@@ -22,7 +21,7 @@ else
 endif
 
 .pylintrc:
-	$(PYLINT) --disable=bad-whitespace,missing-docstring,pointless-string-,global-statement --reports=n --generate-rcfile > $@
+	$(PYLINT) --disable=bad-whitespace,missing-docstring,pointless-string-statement,global-statement,too-many-branches,trailing-whitespace,too-many-statements --reports=n --generate-rcfile > $@
 
 collatz-tests:
 	git clone https://github.com/cs373-summer-2016/collatz-tests.git

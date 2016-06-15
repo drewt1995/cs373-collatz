@@ -77,8 +77,8 @@ class TestCollatz (TestCase):
         self.assertEqual(val, 125)
 
     def test_eval_8(self):
-        val = collatz_eval(210, 201)
-        self.assertEqual(val, 89)
+        val = collatz_eval(200000, 201)
+        self.assertEqual(val, 383)
 
     def test_eval_9(self):
         val = collatz_eval(10, 1)
