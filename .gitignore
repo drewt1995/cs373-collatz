@@ -1,0 +1,5 @@
+*.tmp
+collatz-tests/*
+# pyenv
+.python-version
+
