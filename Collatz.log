@@ -1,3 +1,21 @@
+commit b121c71b7775f93a3a3baed9291bd966b6953d11
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 10:41:05 2016 -0500
+
+    Added optimizations and updates so would work in Travis CI
+
+commit ee5f3706780bcb25fbc0b7739deb134948b82364
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 10:34:32 2016 -0500
+
+    Created and optimized SphereCollatz.py, Optimized further RunCollatz.py and updated Unit tests
+
+commit 471abad3ed69d77f2063647de32426a0348450bf
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Tue Jun 14 13:31:59 2016 -0500
+
+    Creating more unit tests and adding a few files
+
 commit 13857cce1d5da80290549c3c2a42e82b9b49ee8c
 Author: Andrew Turner <drewt1995@gmail.com>
 Date:   Tue Jun 14 12:04:12 2016 -0500
