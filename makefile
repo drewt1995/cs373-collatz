@@ -22,7 +22,7 @@ else
 endif
 
 .pylintrc:
-	$(PYLINT) --disable=bad-whitespace,missing-docstring,pointless-string-statement --reports=n --generate-rcfile > $@
+	$(PYLINT) --disable=bad-whitespace,missing-docstring,pointless-string-,global-statement --reports=n --generate-rcfile > $@
 
 collatz-tests:
 	git clone https://github.com/cs373-summer-2016/collatz-tests.git
