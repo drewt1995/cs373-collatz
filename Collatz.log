@@ -1,3 +1,42 @@
+commit ccc7580b976b4f56ded16d3c154300c7150f19e2
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 17:05:32 2016 -0500
+
+    Formatted code with autopep8
+
+commit c3c2c2243e118e704c2fb85e5f28e81d3e3b0be9
+Merge: f1a5e98 314cf39
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 16:59:45 2016 -0500
+
+    Merge branch 'initialBranch' of https://github.com/drewt1995/cs373-collatz into initialBranch
+
+commit f1a5e985497ad862670c53973bdddccd5dd6eca8
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 16:59:28 2016 -0500
+
+    Added comments to the code blocks for clarity
+
+commit 314cf39c1da6c9d51a1ecc9df4af1fa71db81141
+Author: drewt1995 <drewt1995@gmail.com>
+Date:   Wed Jun 15 16:38:56 2016 -0500
+
+    Create the .gitignore
+    
+    ignores all temp files and files downloaded from different repository
+
+commit 08310706c2c1bd2db846d805756eb4c1a0346dc4
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 15:54:00 2016 -0500
+
+    updated Documentation and updated the commit log
+
+commit 958904fc6ce59aea098423cc6ead5951e7a4da17
+Author: Andrew Turner <drewt1995@gmail.com>
+Date:   Wed Jun 15 15:21:59 2016 -0500
+
+    Modified Sphere collatz, Test Collatz and Collatz to be the same and compile with pylint, also changed a few lines in the makefile to include the checked out dir and updated pylint parameters
+
 commit a7dc8c417a269a769b90a46798d251837d8a122c
 Author: Andrew Turner <drewt1995@gmail.com>
 Date:   Wed Jun 15 11:08:50 2016 -0500
