@@ -93,12 +93,10 @@ class TestCollatz (TestCase):
         collatz_print(write, 1, 10, 20)
         self.assertEqual(write.getvalue(), "1 10 20\n")
 
-
     def test_print_2(self):
         write = StringIO()
         collatz_print(write, 1, 999999, 5477898)
         self.assertEqual(write.getvalue(), "1 999999 5477898\n")
-
 
     def test_print_3(self):
         write = StringIO()
