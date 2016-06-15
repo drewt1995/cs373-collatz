@@ -136,24 +136,25 @@ def collatz_eval(i, j):
 
     return the max cycle length of the range [i, j]
     """
+    #Code block checks to see if the highest value is within the 
+    #range of i and j, if so return the max cycle length
     if i <= TESTVAL <= j:
         return MAXCYCLE
+    #If the second variable is greater than the first return
+    #switch them
     if j < i:
         tmp = i
         i = j
         j = tmp
-
+    #Get the bounds of the upper and lower blocks in the cache
     low_val = i // 1000 + 2
     high_val = j // 1000 - 1
-
+    #If the high value evaluates to lower than 0 set to 1
     if high_val <= 0:
         high_val = 1
 
     max_value = 1
-
-    #print(str(low_val) + " " + str(high_val))
-
-
+    #If the two values are within range perform operations normally
     if high_val <= low_val:
         for val in range(i, j + 1):
             count = 1
@@ -167,11 +168,11 @@ def collatz_eval(i, j):
             if count > max_value:
                 max_value = count
         return max_value
-
+    #otherwise search the range of the cache for the highest value
     for position in range(low_val, high_val+1):
         if FIXEDINCREMENT[position] > max_value:
             max_value = FIXEDINCREMENT[position]
-
+    #Check the values that are unchecked from i to low range value
     for val in range(i, low_val * 1000 + 2):
         count = 1
         while val != 1:
@@ -183,7 +184,7 @@ def collatz_eval(i, j):
                 count += 2
         if count > max_value:
             max_value = count
-
+    #Check the values that are unchecked from high range value to j
     for val in range(high_val * 1000 + 1, j + 1):
         count = 1
         while val != 1:
